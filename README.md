@@ -38,7 +38,7 @@ To infer distortion parameter and focal length of a given camera, you can use pr
 For detailed information refer to the `Section 4.3` of our project. In short, all CNNs show approximately the same perfomance. But weights from [2018 CVMP DeepCalib] show better perfomance because [2018 CVMP DeepCalib] trained on large SUN360 dataset which is not available anymore. We trained on this data [link](https://drive.google.com/drive/folders/1ooaYwvNuFd-iEEcmOQHpLunJEmo7b4NM).
 
 #### Weights
-The weights for [2018 CVMP DeepCalib] can be found [here](https://drive.google.com/file/d/1TYZn-f2z7O0hp_IZnNfZ06ExgU9ii70T/view). The weights for our CNNs can be found [here]
+The weights for [2018 CVMP DeepCalib] can be found [here](https://drive.google.com/file/d/1TYZn-f2z7O0hp_IZnNfZ06ExgU9ii70T/view). The weights for our CNNs can be found [here](https://drive.google.com/file/d/1bTZCLx0EEZncfDNmxXPJbsGBf9pZP-rw/view?usp=sharing).
 
 #### Undistortion
 One way to qualitatively assess the accuracy of predicted parameters is to use those to undistort images that were used to predict the parameters. Undistortion folder contains MATLAB code to undistort multiple images from .txt file. The format of the .txt file is the following: 1st column contains `path to the image`, 2nd column is `focal length`, 3rd column is `distortion parameter`. Each row corresponds to a single image. With a simple modification you can use it on a single image by giving direct path to it and predicted parameters. However, you need to change only `undist_from_txt.m` file, not the `undistSphIm.m`.
